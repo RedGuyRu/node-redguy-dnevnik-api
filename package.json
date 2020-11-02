@@ -1,0 +1,27 @@
+{
+  "name": "node-redguy-dnevnik-api",
+  "version": "1.0.0",
+  "description": "Library to use redguy dnevnik api",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node tests/tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RedGuyGames/node-redguy-dnevnik-api.git"
+  },
+  "keywords": [],
+  "author": "redguys",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.0"
+  },
+  "bugs": {
+    "url": "https://github.com/RedGuyGames/node-redguy-dnevnik-api/issues"
+  },
+  "homepage": "https://github.com/RedGuyGames/node-redguy-dnevnik-api#readme"
+}
