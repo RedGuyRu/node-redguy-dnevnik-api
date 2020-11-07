@@ -1,6 +1,6 @@
 {
   "name": "node-redguy-dnevnik-api",
-  "version": "1.0.3",
+  "version": "1.0.3.1",
   "description": "Library to use redguy dnevnik api",
   "main": "lib/index.js",
   "directories": {
