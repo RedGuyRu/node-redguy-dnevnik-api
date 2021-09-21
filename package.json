@@ -14,6 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/RedGuyGames/node-redguy-dnevnik-api.git"
   },
+  "typings": "index.d.ts",
   "keywords": [],
   "author": "redguys",
   "license": "MIT",
