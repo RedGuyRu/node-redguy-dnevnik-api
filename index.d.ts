@@ -17,11 +17,11 @@ export class Messages {
 }
 
 export class Links {
-
+    //Dont have support now
 }
 
 export class Users {
-
+    resolveUserIdBySocialId(social: string, id: number): Promise<number>;
 }
 
 export class Marks {
