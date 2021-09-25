@@ -8,6 +8,8 @@ export class ApiClient {
     Users(): Users;
 
     Marks(): Marks;
+
+    Homeworks(): Homeworks;
 }
 
 export class Messages {
@@ -41,6 +43,25 @@ export class Marks {
     }]>;
 }
 
-export class Message {
+export class Homeworks {
+    getDayHomework(id: number, date: string): Promise<[{
+        lesson: string,
+        value: string | null,
+        deadline: string,
+        comment: string | null,
+        attachments: [{ url: string }],
+        eoms: [{ player: string, view: string, player_view: string }]
+    }]>;
+}
 
+export class Message {
+    get id(): number;
+
+    get social(): string;
+
+    get text(): string;
+
+    get receiver(): string;
+
+    get state(): number;
 }
