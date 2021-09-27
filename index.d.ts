@@ -50,7 +50,8 @@ export class Homeworks {
         deadline: string,
         comment: string | null,
         attachments: [{ url: string }],
-        eoms: [{ player: string, view: string, player_view: string }]
+        tests: [{ player: string, view: string, player_view: string }],
+        lessons: [{ url: string }]
     }]>;
 }
 
