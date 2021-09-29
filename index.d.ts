@@ -71,14 +71,9 @@ export class Message {
 
 export class Schedules {
     getDaySchedules(id: number, date: string): Promise<{
-        "1": { lesson: string, time: string, replaced: boolean }|undefined,
-        "2": { lesson: string, time: string, replaced: boolean }|undefined,
-        "3": { lesson: string, time: string, replaced: boolean }|undefined,
-        "4": { lesson: string, time: string, replaced: boolean }|undefined,
-        "5": { lesson: string, time: string, replaced: boolean }|undefined,
-        "6": { lesson: string, time: string, replaced: boolean }|undefined,
-        "7": { lesson: string, time: string, replaced: boolean }|undefined,
-        "8": { lesson: string, time: string, replaced: boolean }|undefined,
-        "9": { lesson: string, time: string, replaced: boolean }|undefined
+        lessons: [{ name: string, time: string, replaced: boolean, position: number }],
+        count: number,
+        start_ordinal: number,
+        end_ordinal: number
     }>;
 }
