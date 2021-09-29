@@ -70,7 +70,7 @@ export class Message {
 }
 
 export class Schedules {
-    getDaySchedules(id: number, date: string): Promise<[{
+    getDaySchedules(id: number, date: string): Promise<{
         "1": { lesson: string, time: string, replaced: boolean }|undefined,
         "2": { lesson: string, time: string, replaced: boolean }|undefined,
         "3": { lesson: string, time: string, replaced: boolean }|undefined,
@@ -80,5 +80,5 @@ export class Schedules {
         "7": { lesson: string, time: string, replaced: boolean }|undefined,
         "8": { lesson: string, time: string, replaced: boolean }|undefined,
         "9": { lesson: string, time: string, replaced: boolean }|undefined
-    }]>;
+    }>;
 }
