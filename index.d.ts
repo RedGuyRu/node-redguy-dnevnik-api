@@ -11,7 +11,7 @@ export class ApiClient {
 
     Homeworks(): Homeworks;
 
-    Schedules(): Schedules;
+    Schedule(): Schedule;
 }
 
 export class Messages {
@@ -69,8 +69,8 @@ export class Message {
     get state(): number;
 }
 
-export class Schedules {
-    getDaySchedules(id: number, date: string): Promise<{
+export class Schedule {
+    getDaySchedule(id: number, date: string): Promise<{
         lessons: [{ name: string, time: string, replaced: boolean, position: number }],
         count: number,
         start_ordinal: number,
