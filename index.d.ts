@@ -26,6 +26,8 @@ export class Links {
 
 export class Users {
     resolveUserIdBySocialId(social: string, id: number): Promise<number>;
+
+    generateEditSession(id: number): Promise<string>;
 }
 
 export class Marks {
