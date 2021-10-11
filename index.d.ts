@@ -79,3 +79,11 @@ export class Schedule {
         end_ordinal: number
     }>;
 }
+
+export class DnevnikDate {
+    constructor(s?);
+
+    getDnevnikTypeOne():string;
+    getDnevnikTypeTwo():string;
+    getISO():string;
+}

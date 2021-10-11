@@ -19,10 +19,14 @@
   "author": "redguys",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.21.0"
+    "axios": "^0.21.4",
+    "luxon": "^2.0.2"
   },
   "bugs": {
     "url": "https://github.com/RedGuyGames/node-redguy-dnevnik-api/issues"
   },
-  "homepage": "https://github.com/RedGuyGames/node-redguy-dnevnik-api#readme"
+  "homepage": "https://github.com/RedGuyGames/node-redguy-dnevnik-api#readme",
+  "devDependencies": {
+    "@types/luxon": "^2.0.5"
+  }
 }
