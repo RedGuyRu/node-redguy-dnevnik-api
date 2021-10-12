@@ -37,7 +37,7 @@ export class Marks {
         five: [{ name: string, needs: number }]
     }>;
 
-    getDayMarks(id: number, date: string): Promise<[{
+    getDayMarks(id: number, date: DnevnikDate): Promise<[{
         comment: string | null,
         is_exam: boolean,
         is_point: boolean,
@@ -48,7 +48,7 @@ export class Marks {
 }
 
 export class Homeworks {
-    getDayHomework(id: number, date: string): Promise<[{
+    getDayHomework(id: number, date: DnevnikDate): Promise<[{
         lesson: string,
         value: string | null,
         deadline: string,
@@ -72,7 +72,7 @@ export class Message {
 }
 
 export class Schedule {
-    getDaySchedule(id: number, date: string): Promise<{
+    getDaySchedule(id: number, date: DnevnikDate): Promise<{
         lessons: [{ name: string, time: string, replaced: boolean, position: number }],
         count: number,
         start_ordinal: number,
