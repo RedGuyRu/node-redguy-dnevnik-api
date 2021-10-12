@@ -87,5 +87,6 @@ export class DnevnikDate {
 
     getDnevnikTypeOne():string;
     getDnevnikTypeTwo():string;
+    getTime():string;
     getISO():string;
 }
