@@ -89,4 +89,5 @@ export class DnevnikDate {
     getDnevnikTypeTwo():string;
     getTime():string;
     getISO():string;
+    getDiffFromNowInMinutes():number;
 }
