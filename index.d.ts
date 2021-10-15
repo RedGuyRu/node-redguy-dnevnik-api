@@ -21,7 +21,10 @@ export class Messages {
 }
 
 export class Links {
-    //Dont have support now
+    getDayLinks(id: number, date: DnevnikDate): Promise<{
+        links: [{lesson:{ name: string, time: string, replaced: boolean, position: number },link:string}],
+        count: number
+    }>;
 }
 
 export class Users {
