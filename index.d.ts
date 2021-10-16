@@ -86,7 +86,7 @@ export class Schedule {
 export class DnevnikDate {
     static isISODate(s):boolean;
 
-    constructor(s?);
+    constructor(s?, zone?:string);
 
     getDnevnikTypeOne():string;
     getDnevnikTypeTwo():string;
