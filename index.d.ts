@@ -88,6 +88,7 @@ export class DnevnikDate {
 
     constructor(s?, zone?:string);
 
+    minus(minus: {minutes?:number}):DnevnikDate;
     getDnevnikTypeOne():string;
     getDnevnikTypeTwo():string;
     getTime():string;
