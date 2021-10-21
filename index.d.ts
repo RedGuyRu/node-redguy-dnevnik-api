@@ -12,6 +12,8 @@ export class ApiClient {
     Homeworks(): Homeworks;
 
     Schedule(): Schedule;
+
+    Menu(): Menu;
 }
 
 export class Messages {
@@ -22,10 +24,38 @@ export class Messages {
 
 export class Links {
     getDayLinks(id: number, date: DnevnikDate): Promise<{
-        links: [{lesson:{ name: string, time: string, replaced: boolean, position: number },link:string}],
+        links: [{ lesson: { name: string, time: string, replaced: boolean, position: number }, link: string }],
         count: number
     }>;
 }
+
+export class Menu {
+    getDayMenu(id: number, date: DnevnikDate): Promise<{
+        dinner: {
+            title: string,
+            description: string,
+            summary: number,
+            meals: [{
+                name: string,
+                ingredients: string,
+                price: number,
+                nutrition: {
+                    calories: number,
+                    protein: number,
+                    fat: number,
+                    carbs: number,
+                    vitamins: []
+                },
+                full_name: string
+            }],
+            is_discount_complex: false,
+            used_subscription_feeding: false,
+            used_special_menu: false,
+            used_variable_feeding: false
+        }
+    }>;
+}
+
 
 export class Users {
     resolveUserIdBySocialId(social: string, id: number): Promise<number>;
@@ -84,14 +114,19 @@ export class Schedule {
 }
 
 export class DnevnikDate {
-    static isISODate(s):boolean;
+    static isISODate(s): boolean;
 
-    constructor(s?, zone?:string);
+    constructor(s?, zone?: string);
 
-    minus(minus: {minutes?:number}):DnevnikDate;
-    getDnevnikTypeOne():string;
-    getDnevnikTypeTwo():string;
-    getTime():string;
-    getISO():string;
-    getDiffFromNowInMinutes():number;
+    minus(minus: { minutes?: number }): DnevnikDate;
+
+    getDnevnikTypeOne(): string;
+
+    getDnevnikTypeTwo(): string;
+
+    getTime(): string;
+
+    getISO(): string;
+
+    getDiffFromNowInMinutes(): number;
 }
