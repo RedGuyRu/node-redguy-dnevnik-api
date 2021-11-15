@@ -61,6 +61,15 @@ export class Users {
     resolveUserIdBySocialId(social: string, id: number): Promise<number>;
 
     generateEditSession(id: number): Promise<string>;
+
+    getUserInfo(id: number): Promise<{
+        profile_id: number,
+        name: string,
+        birthDate: string,
+        age: number,
+        sex: string,
+        ispp: number
+    }>;
 }
 
 export class Marks {
