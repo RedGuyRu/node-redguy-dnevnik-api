@@ -14,6 +14,26 @@ export class ApiClient {
     Schedule(): Schedule;
 
     Menu(): Menu;
+
+    Answers(): Answers;
+}
+
+export class Answers {
+    getMeshAnswers(variant: number, type?: "homework"|"spec"): Promise<[
+        {
+            question: string,
+            question_attachments: [string],
+            answer: {
+                type: "number"|"text"|"texts"|"map"|"free",
+                number?:number,
+                text?:string,
+                texts?:[string],
+                map?:Object
+            }
+        }
+    ]>;
+
+    planMeshAnswers(user:number, variant:number, type?: "homework"|"spec"): Promise<number>;
 }
 
 export class Messages {
@@ -55,7 +75,6 @@ export class Menu {
         }
     }>;
 }
-
 
 export class Users {
     resolveUserIdBySocialId(social: string, id: number): Promise<number>;
