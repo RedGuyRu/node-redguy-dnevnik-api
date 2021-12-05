@@ -19,21 +19,21 @@ export class ApiClient {
 }
 
 export class Answers {
-    getMeshAnswers(variant: number, type?: "homework"|"spec"): Promise<[
+    getMeshAnswers(variant: number, type?: "homework" | "spec"): Promise<[
         {
             question: string,
             question_attachments: [string],
             answer: {
-                type: "number"|"text"|"texts"|"map"|"free",
-                number?:number,
-                text?:string,
-                texts?:[string],
-                map?:Object
+                type: "number" | "text" | "texts" | "map" | "free",
+                number?: number,
+                text?: string,
+                texts?: [string],
+                map?: Object
             }
         }
     ]>;
 
-    planMeshAnswers(user:number, variant:number, type?: "homework"|"spec"): Promise<number>;
+    planMeshAnswers(user: number, variant: number, type?: "homework" | "spec"): Promise<number>;
 }
 
 export class Messages {
@@ -134,7 +134,20 @@ export class Message {
 
 export class Schedule {
     getDaySchedule(id: number, date: DnevnikDate): Promise<{
-        lessons: [{ name: string, time: string, replaced: boolean, position: number }],
+        lessons: [{
+            name: string,
+            time: string,
+            replaced: boolean,
+            position: number,
+            teacher: {
+                id: number,
+                name: {
+                    first_name: string,
+                    last_name: string,
+                    middle_name: string
+                }
+            }
+        }],
         count: number,
         start_ordinal: number,
         end_ordinal: number
