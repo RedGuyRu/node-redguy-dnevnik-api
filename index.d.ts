@@ -140,7 +140,6 @@ export class Schedule {
             replaced: boolean,
             position: number,
             teacher: {
-                id: number,
                 name: {
                     first_name: string,
                     last_name: string,
