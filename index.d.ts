@@ -51,7 +51,7 @@ export class Links {
 
 export class Menu {
     getDayMenu(id: number, date: DnevnikDate): Promise<{
-        dinner: {
+        dinner: [{
             title: string,
             description: string,
             summary: number,
@@ -72,7 +72,51 @@ export class Menu {
             used_subscription_feeding: false,
             used_special_menu: false,
             used_variable_feeding: false
-        }
+        }],
+        breakfast: [{
+            title: string,
+            description: string,
+            summary: number,
+            meals: [{
+                name: string,
+                ingredients: string,
+                price: number,
+                nutrition: {
+                    calories: number,
+                    protein: number,
+                    fat: number,
+                    carbs: number,
+                    vitamins: []
+                },
+                full_name: string
+            }],
+            is_discount_complex: false,
+            used_subscription_feeding: false,
+            used_special_menu: false,
+            used_variable_feeding: false
+        }],
+        snack: [{
+            title: string,
+            description: string,
+            summary: number,
+            meals: [{
+                name: string,
+                ingredients: string,
+                price: number,
+                nutrition: {
+                    calories: number,
+                    protein: number,
+                    fat: number,
+                    carbs: number,
+                    vitamins: []
+                },
+                full_name: string
+            }],
+            is_discount_complex: false,
+            used_subscription_feeding: false,
+            used_special_menu: false,
+            used_variable_feeding: false
+        }]
     }>;
 }
 
