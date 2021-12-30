@@ -133,6 +133,8 @@ export class Users {
         sex: string,
         ispp: number
     }>;
+
+    getBalance(id: number): Promise<number>;
 }
 
 export class Marks {
