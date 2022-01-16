@@ -135,6 +135,13 @@ export class Users {
     }>;
 
     getBalance(id: number): Promise<number>;
+
+    getVisits(id: number, date: DnevnikDate): Promise<[{
+        enter: string,
+        leave: string|null,
+        duration: string|"-",
+        address: string
+    }]>;
 }
 
 export class Marks {
@@ -202,12 +209,28 @@ export class Schedule {
 export class DnevnikDate {
     static isISODate(s): boolean;
 
+    /**
+     *
+     * @param s is not set: current time;
+     * is dnevnikDateTypeOne: Moscow time;
+     * is timestamp: UTC time or provided;
+     * is ISO: UTC or provided;
+     * @param zone
+     */
     constructor(s?, zone?: string);
 
     minus(minus: { minutes?: number }): DnevnikDate;
 
+    /**
+     * 16.01.2022
+     * @returns string with date in MSK
+     */
     getDnevnikTypeOne(): string;
 
+    /**
+     * 2022-01-16
+     * @returns string with date in MSK
+     */
     getDnevnikTypeTwo(): string;
 
     getTime(): string;
