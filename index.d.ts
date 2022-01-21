@@ -142,6 +142,26 @@ export class Users {
         duration: string|"-",
         address: string
     }]>;
+
+    getProgress(id: number): Promise<{
+        title:string,
+        hours:number,
+        sections:[{
+            name: string,
+            subjects: [{
+                name:string,
+                id:number,
+                hours: {
+                    total:number,
+                    passed:number,
+                    max_per_week:number,
+                    min_per_week:number
+                },
+                passed:number
+            }],
+            passed: number
+        }]
+    }>;
 }
 
 export class Marks {
