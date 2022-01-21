@@ -138,30 +138,35 @@ export class Users {
 
     getVisits(id: number, date: DnevnikDate): Promise<[{
         enter: string,
-        leave: string|null,
-        duration: string|"-",
+        leave: string | null,
+        duration: string | "-",
         address: string
     }]>;
 
     getProgress(id: number): Promise<{
-        title:string,
-        hours:number,
-        sections:[{
+        title: string,
+        hours: number,
+        sections: [{
             name: string,
             subjects: [{
-                name:string,
-                id:number,
+                name: string,
+                id: number,
                 hours: {
-                    total:number,
-                    passed:number,
-                    max_per_week:number,
-                    min_per_week:number
+                    total: number,
+                    passed: number,
+                    max_per_week: number,
+                    min_per_week: number
                 },
-                passed:number
+                passed: number
             }],
             passed: number
         }]
     }>;
+
+    getAEGroups(id: number): Promise<[{
+        id: number,
+        name: string
+    }]>
 }
 
 export class Marks {
