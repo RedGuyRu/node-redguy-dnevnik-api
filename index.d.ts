@@ -169,6 +169,8 @@ export class Users {
     }]>
 
     getLessons(id: number): Promise<[{ id: number, name: string }]>;
+
+    getSubject(id: number, subject: number): Promise<{ id: number, name: string, full_name: string }>;
 }
 
 export class Marks {
@@ -270,5 +272,5 @@ export class DnevnikDate {
 }
 
 export class TextUtil {
-    static degree(num:number): string;
+    static degree(num: number): string;
 }
