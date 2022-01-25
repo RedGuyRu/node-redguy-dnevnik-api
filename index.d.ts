@@ -268,3 +268,7 @@ export class DnevnikDate {
 
     getDiffFromNowInMinutes(): number;
 }
+
+export class TextUtil {
+    static degree(num:number): string;
+}
