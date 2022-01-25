@@ -167,6 +167,8 @@ export class Users {
         id: number,
         name: string
     }]>
+
+    getLessons(id: number): Promise<[{ id: number, name: string }]>;
 }
 
 export class Marks {
@@ -184,6 +186,8 @@ export class Marks {
         weight: number,
         lesson: string
     }]>;
+
+    getLessonMarks(id: number, lesson: number): Promise<[{ mark: number, weight: number }]>;
 }
 
 export class Homeworks {
