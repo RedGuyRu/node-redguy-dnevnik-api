@@ -16,6 +16,8 @@ export class ApiClient {
     Menu(): Menu;
 
     Answers(): Answers;
+
+    Status(): Status;
 }
 
 export class Answers {
@@ -235,6 +237,10 @@ export class Schedule {
         start_ordinal: number,
         end_ordinal: number
     }>;
+}
+
+export class Status {
+    getDnevnikStatus(): Promise<{notifications:boolean}>;
 }
 
 export class DnevnikDate {
