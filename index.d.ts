@@ -173,6 +173,13 @@ export class Users {
     getLessons(id: number): Promise<[{ id: number, name: string }]>;
 
     getSubject(id: number, subject: number): Promise<{ id: number, name: string, full_name: string }>;
+
+    getPeriods(id: number): Promise<[{
+        vacation: boolean,
+        name: string,
+        begin: string,
+        end: string
+    }]>;
 }
 
 export class Marks {
