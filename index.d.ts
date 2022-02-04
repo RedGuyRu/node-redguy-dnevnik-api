@@ -247,7 +247,7 @@ export class Schedule {
 }
 
 export class Status {
-    getDnevnikStatus(): Promise<{notifications:boolean}>;
+    getDnevnikStatus(): Promise<{ notifications: boolean }>;
 }
 
 export class DnevnikDate {
@@ -281,7 +281,17 @@ export class DnevnikDate {
 
     getISO(): string;
 
+    /**
+     * < 0 - past
+     * > 0 - future
+     */
     getDiffFromNowInMinutes(): number;
+
+    /**
+     * < 0 - past
+     * > 0 - future
+     */
+    getDiffFromNowInDays(): number;
 }
 
 export class TextUtil {
