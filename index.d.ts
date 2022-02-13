@@ -180,6 +180,10 @@ export class Users {
         begin: string,
         end: string
     }]>;
+
+    getNotifications(id: number): Promise<string>;
+
+    setNotifications(id: number, options: string): Promise<string>;
 }
 
 export class Marks {
