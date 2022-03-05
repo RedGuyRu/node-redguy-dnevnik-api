@@ -213,6 +213,7 @@ export class Homeworks {
         comment: string | null,
         attachments: [{ url: string }],
         tests: [{ player: string, view: string, player_view: string }],
+        atomics: [{ player?: string, view: string}],
         lessons: [{ url: string }]
     }]>;
 }
