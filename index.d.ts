@@ -128,12 +128,14 @@ export class Users {
     generateEditSession(id: number): Promise<string>;
 
     getUserInfo(id: number): Promise<{
-        profile_id: number,
+        id: number,
         name: string,
         birthDate: string,
         age: number,
         sex: string,
-        ispp: number
+        ispp: number,
+        curriculum: number,
+        curricula: string
     }>;
 
     getBalance(id: number): Promise<number>;
