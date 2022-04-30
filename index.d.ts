@@ -36,6 +36,10 @@ export class Answers {
     ]>;
 
     planMeshAnswers(user: number, variant: number, type?: "homework" | "spec"): Promise<number>;
+
+    getNetTestAnswers(link: string): Promise<[{ question: String, answer: String }]>;
+
+    planNetTestAnswers(user: number, link: string): Promise<number>;
 }
 
 export class Messages {
@@ -215,7 +219,7 @@ export class Homeworks {
         comment: string | null,
         attachments: [{ url: string }],
         tests: [{ player: string, view: string, player_view: string }],
-        atomics: [{ player?: string, view: string}],
+        atomics: [{ player?: string, view: string }],
         lessons: [{ url: string }]
     }]>;
 }
