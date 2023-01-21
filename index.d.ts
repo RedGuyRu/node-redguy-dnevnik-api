@@ -190,6 +190,8 @@ export class Users {
     getNotifications(id: number): Promise<string>;
 
     setNotifications(id: number, options: string): Promise<string>;
+
+    logout(id: number): Promise<void>;
 }
 
 export class Marks {
